@@ -1,0 +1,105 @@
+/* color scheme transition */
+* {
+  transition: filter .3s ease-out;
+}
+
+html, body, #app {
+  transition: all .3s ease-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Root Inversion
+   */
+  html {
+    filter: invert(0.94) !important;
+  }
+  html, body, #app {
+    background: white !important;
+  }
+
+  /* Uninverted Elements
+   */
+  video,
+  /* iframe, */
+  object,
+  svg,
+  img,
+  [name="articleBody"] p a,
+  [name="articleBody"] ul a,
+  [name="articleBody"] ol a,
+  [direction="positive"],
+  [direction="negative"],
+  button:not(#desktop-sections-button):not(.css-11evwck),
+  [class*="sprite"],
+  .g-headshot,
+  .react-vhs-container [class*="poster"],
+  .vhs-plugin-controls,
+  .vhs-plugin-controls-gradient,
+  button[data-testid="user-settings-button"],
+  #live, .css-40v4b6, .css-192lewg .e6idgb70 /* LIVE elements */
+  {
+    color: white;
+    filter: invert(1.06) !important;
+  }
+
+  .vhs-plugin-controls * {
+    filter: invert(0) !important;
+  }
+
+  /* Generic Button Stuff
+   */
+  button.css-1h5igzw,
+  button.css-159bbcu,
+  [data-testid=mini-nav-sections] button,
+  [data-testid=mini-nav-sections] svg,
+  [role="toolbar"][data-testid="share-tools"] button,
+  [role="toolbar"][data-testid="share-tools"] svg {
+    background-color: transparent !important;
+    opacity: 0.88 !important;
+  }
+ 
+  /* NYT Logo
+   */
+  [data-testid=masthead-desktop-logo],
+  [data-testid=masthead-mobile-logo] {
+    filter: invert(0.9) !important;
+  }
+  .ReactModal__Content > svg[fill="#000"] {
+    filter: invert(0.1) !important;
+  }
+  [data-testid="mini-nav-home"] svg path {
+    fill: rgba(255, 255, 255, .88);
+  }
+
+  /* App Masthead & Navbar
+   */
+  #app header > .css-1y7qxpi[style*="visible"] {
+    /* front page nav */
+    box-shadow: 0 .75px 0 rgba(0, 0, 0, .33), 0 0 8px 3px rgba(255, 255, 255, .88);
+  }
+  .css-1aor85t,
+  .nytslm_outerContainer {
+    /* article nav */
+    box-shadow: 0 .75px 0 rgba(0, 0, 0, 0.1), 1px 3px 6px rgba(255, 255, 255, 1);
+  }
+  .ReactModal__Content {
+    /* account modal */
+    box-shadow: rgba(255, 255, 255, .5) 0px 0px 6px 3px !important;
+    border-color: rgba(0, 0, 0, .2) !important;
+  }
+  #nytslm {
+    box-shadow: 0 .75px 0 rgba(0, 0, 0, .2), -6px 0 black, 6px 0 black, 1px 3px 6px rgba(255, 255, 255, 1);
+  }
+  
+  
+  /* Article-Specific Stuff
+   */
+  [aria-label="comments panel"] {
+    box-shadow: 
+      rgba(0, 0, 0, .15) -.88px 0 0,
+      rgba(255, 255, 255, 1) 3px 0px 12px 3px;
+  }
+  [role="toolbar"][data-testid="share-tools"] svg.css-4brsb6 path {
+    fill: white;
+  }
+}

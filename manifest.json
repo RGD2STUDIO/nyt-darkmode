@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "NYT Darkmode",
+  "version": "0.1.0",
+  "description": "Adds a darkmode theme to the New York Times for all my late-night readers.",
+
+  "content_scripts": [
+    {
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "matches": ["https://www.nytimes.com/*"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
