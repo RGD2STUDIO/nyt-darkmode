@@ -1,1 +1,1 @@
-<h1 align=center>📰🌒 NYT Darkmode</h1>
+<h1 align=center>📰 NYT Darkmode 🌒</h1>
